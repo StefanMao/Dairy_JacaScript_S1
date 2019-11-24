@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<title>RR Reading Record 閱讀紀錄</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type="text/css" src="jquery-ui-1.12.1/jquery-ui.css"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	 <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css">
+	
+	<link href="form.css" rel ="stylesheet" />
+
+	
+	
+</head>
+<body>
+
+ 	<div class="container">
+    <form action="action_page.php">
+
+    <label for="Books_name">●書籍名稱</label>
+    <input type="text" id="fname" name="firstname" placeholder="請輸入書籍名稱...">
+
+    <label for="Author_name">●作者</label>
+    <input type="text" id="lname" name="lastname" placeholder="請輸入作者...">
+	
+	<label for="date">日期:</label>
+	<input type="date" id="datePicker" name="trip-start" min="1993-01-01" max="2100-12-31">
+	</br>
+    <label for="category">●分類</label>
+    <select id="category" name="category">
+      <option value="noval">小說</option>
+      <option value="business">商業/管理</option>
+      <option value="Social">社會/人文</option>
+    </select>
+
+    <label for="comment">●評論/心得</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
