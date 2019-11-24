@@ -1,3 +1,3 @@
-$(document).ready( function() {
-    document.getElementById('datePicker').valueAsDate = new Date();
-})
+$(document).ready(function(){
+ $('#datepicker').datepicker(); 
+});
