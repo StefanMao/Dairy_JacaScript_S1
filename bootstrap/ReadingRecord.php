@@ -1,3 +1,8 @@
+<!-- load navbar -->
+<?php
+  require_once 'includes/head.php'; 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,15 +24,6 @@
 	<link href="css/form.css" rel ="stylesheet" />
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css"/>
 	
-	<!-- load navbar -->
-	<div id="navbar"></div>
-	<script >
-		$(document).ready(function(){
-
-			$("#navbar").load("head.html")
-		})
-	</script>
-	
 	
 </head>
 <body>
@@ -36,42 +32,14 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="main.js"></script>
 	
-
-
-	
-
-
- 	<div class="container">
-    <form action="action_page.php">
-
-    <label for="Books_name">●書籍名稱</label>
-    <input type="text" id="fname" name="firstname" placeholder="請輸入書籍名稱...">
-
-    <label for="Author_name">●作者</label>
-    <input type="text" id="lname" name="lastname" placeholder="請輸入作者...">
-	
-	<label for="date">●日期</label>
-	<input type='text' class="form-control" id='datepicker' style='width: 300px;' >
-
-    <label for="category">●分類</label>
-    <select id="category" name="category">
-      <option value="noval">小說</option>
-      <option value="business">商業/管理</option>
-      <option value="Social">社會/人文</option>
-    </select>
-
-    <label for="comment">●評論/心得</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
+ 	
 
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-
+	<?php
+  		require_once 'AddBookForm.php'; 
+	?>
  	
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
     
