@@ -18,19 +18,15 @@
   <div class="container">
     <form action="action_page.php">
 
-      <div class="custom-file mb-3">
-      
-      <input type="file" class="custom-file-input" id="profile-img" name="file">
-      <label class="custom-file-label" for="customFile">Choose file</label>
-      <img src="" id="profile-img-tag" height="200" width="200" onChange="readURL();" />
 
-      </div>
+      <img src="" id="BookImg" height="200" width="200"/>
+      <br>
+      <br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+      <label for="Books_photo">●書籍圖片</label>
+      <input type="text" id="BookImg_src" name="Books_photo" placeholder="請引入書籍圖片來源網址...(網址範例:https://xxx.jpg)" onchange="getBookImage();" onerror="this.src='https://i.imgur.com/EkgYcyW.jpg' ; return false ;">
+    
+      <br>
 
 
     <label for="Books_name">●書籍名稱</label>
@@ -39,8 +35,8 @@
     <label for="Author_name">●作者</label>
     <input type="text" id="lname" name="lastname" placeholder="請輸入作者...">
   
-  <label for="date">●日期</label>
-  <input type='text' class="form-control" id='datepicker' style='width: 300px;' >
+    <label for="date">●日期</label>
+    <input type='text' class="form-control" id='datepicker' style='width: 300px;' >
 
     <label for="category">●分類</label>
     <select id="category" name="category">
