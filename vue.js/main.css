@@ -1,0 +1,18 @@
+
+.title {height: 400px;}
+.arrow_left,.arrow_right {
+  display:inline-block;
+  font-size: 0;
+  padding:1rem ;
+  background-color: #555;
+}
+.arrow_left::before{
+  content:'<';
+  font-size: 1rem;
+  color:#ffffff;
+}
+.arrow_right::before{
+  content:'>';
+  font-size: 1rem;
+  color:#ffffff;
+}
