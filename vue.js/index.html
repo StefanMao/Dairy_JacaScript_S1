@@ -8,70 +8,50 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div id="app">
-        <div class="container">
-            <div class="title">
-                <img class="logo" 
-                :src="src"
-                width="300px">
 
-                <h1>多拉a夢角色</h1>
-                <span class="number">{{ index +1 }}</span>
-                <span class="sex">{{getdata.sex}}</span>
+    <div id ="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div class="input" style="font-size:0px;">
+                    <select v-model = "input.type">
+                        <option>工程</option>
+                        <option>文學</option>
+                        <option>哲學書</option>
+                        <option>兒童故事書</option>
+                        <option>語言</option>
+                    </select>
+                    <input type="text" 
+                            v-model.trim = "input.title"
+                             @keyup.enter="inputHandler"
+                            >
+                    </div>
+                    <div class="menu">
+                        <div class="menuItem"
+                             v-for="(item,index) in menu"
+                        >
+                            <span class="number">{{ index +1}}</span>
+                            <span class="type">{{ item.type }}</span>
+                            <a
+                                :href="item.link"
+                                target="vue-iron"
+                                class="title"
+                            >
 
-            </div>
-            <div class="description">
-                <a v-if=" index > 0" 
-                class="arrow_left" v-on:click="changeIndex(-1)"></a>
-                <div class="menuItem white" style="transform:scale3d(1.5,1.5,1)">
-                    
-                    <a class="title" target="vue-iron" :herf ="menu[index].link">{{getdata.title}}</a>           
+                                 {{ item.title }}
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <a v-if="index < getmax-1"
-                class="arrow_right" v-on:click="changeIndex(1)"></a>
             </div>
-        </div>
+
+        </section>
+
     </div>
+   
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
-    <script>
-    
-    let data ={
-        title:'多拉a夢角色',
-        src:'http://s2.mycomic.cc/uploads/32/6/336974/15057184175298.jpg',
-        index:0,
-        menu:[
-        {sex :'robot' ,title :'哆啦A夢',link:'javascript:;'},
-        {sex :'boy' ,title :'大雄',link:'javascript:;'},
-        {sex :'boy' ,title :'胖虎',link:'javascript:;'},
-        {sex :'boy' ,title :'小夫',link:'javascript:;'},
-        {sex :'girl' ,title :'靜香',link:'javascript:;'}
-        ]
-    }
-
-    let vm = new Vue ({
-
-        el : '#app',
-        data: data,
-        computed:{
-            getdata(){
-                return this.menu[this.index]
-            },
-            getmax()
-            {
-                return this.menu.length
-            }
-        },
-        methods:{
-            changeIndex(change){
-                this.index =(this.index + change +this.getmax )% this.getmax
-            }
-        }
-
-    })
-    
- 
-    
-    </script>
+    <script src='main.js'></script>
 
 </body>
 </html>
