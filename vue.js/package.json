@@ -1,0 +1,14 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "json":"json-server --watch db.json --port 8888"
+  },
+  "author": "mao",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

@@ -222,3 +222,45 @@ h1,
   border-width: 10px 0 10px 17.3px;
   border-color: transparent transparent transparent #34495e;
 }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 4px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+.btn_send {
+  font-size: 30px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.btn_send:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn_cancle {
+  font-size: 30px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.btn_cancle:hover {
+  background-color: #f44336;
+  color: white;
+}
+.Button_SC{
+
+  padding-top:25px;
+
+}

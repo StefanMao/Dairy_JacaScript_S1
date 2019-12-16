@@ -10,35 +10,55 @@
 <body>
 
     <div id ="app">
+        <section v-if="loading">
+            Loading ...............
+        </section>
         <section>
             <div class="container">
                 <div class="title">
                     <div class="input" style="font-size:0px;">
-                    <select v-model = "input.type">
+                            <span>書籍分類</span>
+                    <select v-model = "input.BookType" placeholder="分類..">
+                        
+                        <option>全部</option>
                         <option>工程</option>
                         <option>文學</option>
-                        <option>哲學書</option>
-                        <option>兒童故事書</option>
+                        <option>哲學</option>
+                        <option>故事</option>
                         <option>語言</option>
+                        <option>會計/財務</option>
                     </select>
-                    <input type="text" 
-                            v-model.trim = "input.title"
-                             @keyup.enter="inputHandler"
-                            >
+                    <div class="input" style="font-size:0px;">
+                    <span>書籍名稱</span>
+                            <input type="text" 
+                            v-model.trim = "input.BookName"
+                                placeholder="請輸入書名....">
                     </div>
+                    <span>作者姓名</span>
+                    <input type="text" 
+                        v-model.trim = "input.Author"
+                        placeholder="請輸入作者名....">
+                </br>
+                </br>
+                    <div class="Button_SC">
+                            <button class="btn_send" @click="SubmitHander">送出</button>
+                            <button class="btn_cancle"@click="CancleHander">取消</button>
+                    </div>
+                    
+                    </div>
+
                     <div class="menu">
                         <div class="menuItem"
-                             v-for="(item,index) in menu"
+                            v-for="item in Book" 
                         >
-                            <span class="number">{{ index +1}}</span>
-                            <span class="type">{{ item.type }}</span>
+                            <span class="number">{{ item.id}}</span>
+                            <span class="type">{{ item.BookType }}</span>
                             <a
                                 :href="item.link"
                                 target="vue-iron"
                                 class="title"
                             >
-
-                                 {{ item.title }}
+                                 {{ item.BookName }}
                             </a>
                         </div>
                     </div>
@@ -50,7 +70,8 @@
     </div>
    
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script> 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
     <script src='main.js'></script>
 
 </body>
