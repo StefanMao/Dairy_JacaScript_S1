@@ -7,58 +7,10 @@
       "Author": "蔡康永"
     },
     {
-      "id": 2,
-      "BookType": "文學",
-      "BookName": "為你自己活一次 - 情商課",
-      "Author": "蔡康永"
-    },
-    {
       "BookType": "全部",
-      "BookName": "111",
-      "Author": "111",
-      "id": 3
-    },
-    {
-      "BookType": "全部",
-      "BookName": "222",
-      "Author": "2222",
-      "id": 4
-    },
-    {
-      "BookType": "全部",
-      "BookName": "111",
-      "Author": "11111",
-      "id": 5
-    },
-    {
-      "BookType": "全部",
-      "BookName": "1111111",
-      "Author": "11111",
-      "id": 6
-    },
-    {
-      "BookType": "全部",
-      "BookName": "111",
-      "Author": "45645",
-      "id": 7
-    },
-    {
-      "BookType": "全部",
-      "BookName": "456456",
-      "Author": "45645",
-      "id": 8
-    },
-    {
-      "BookType": "全部",
-      "BookName": "456456",
-      "Author": "4562222222",
-      "id": 9
-    },
-    {
-      "BookType": "全部",
-      "BookName": "無吳無",
-      "Author": "無吳無",
-      "id": 10
+      "BookName": "555",
+      "Author": "555",
+      "id": 2
     }
   ]
 }

@@ -49,7 +49,7 @@
 
                     <div class="menu">
                         <div class="menuItem"
-                            v-for="item in Book" 
+                            v-for="(item,index) in Book" 
                         >
                             <span class="number">{{ item.id}}</span>
                             <span class="type">{{ item.BookType }}</span>
@@ -60,6 +60,12 @@
                             >
                                  {{ item.BookName }}
                             </a>
+
+                           <div class="Button_ED">
+                            <button class="btn_edit" @click="EditHander(index)">編輯</button>
+                            <button class="btn_delete"@click="DeleteHander(index)">刪除</button>
+                          </div>
+
                         </div>
                     </div>
                 </div>
