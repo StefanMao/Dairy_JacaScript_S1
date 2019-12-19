@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
     <div id ="app">
+            <a href="#" class="mylinkButton">首頁</a>
+            <a href="./booklist/Booklist.html" class="mylinkButton">書籍紀錄清單</a>
+            <a href="#" class="mylinkButton">閱讀書籍管理專區</a>
+
         <section v-if="loading">
             Loading ...............
         </section>
         <section>
             <div class="container">
+                    <h1>閱讀書籍紀錄管理專區</h1>
                 <div class="title">
+                    
                     <div class="input" style="font-size:0px;">
                             <span>書籍分類</span>
                     <select v-model = "input.BookType" placeholder="分類..">
@@ -24,9 +29,9 @@
                         <option>工程</option>
                         <option>文學</option>
                         <option>哲學</option>
-                        <option>故事</option>
                         <option>語言</option>
-                        <option>會計/財務</option>
+                        <option>商業管理</option>
+                        <option>財務/會計</option>
                     </select>
                     <div class="input" style="font-size:0px;">
                     <span>書籍名稱</span>
@@ -34,10 +39,19 @@
                             v-model.trim = "input.BookName"
                                 placeholder="請輸入書名....">
                     </div>
-                    <span>作者姓名</span>
-                    <input type="text" 
-                        v-model.trim = "input.Author"
-                        placeholder="請輸入作者名....">
+                    <div class="input" style="font-size:0px;">
+                        <span>作者姓名</span>
+                        <input type="text" 
+                            v-model.trim = "input.Author"
+                            placeholder="請輸入作者名....">    
+                    </div>
+                    <div class="input" style="font-size:0px;">
+                    <span>讀完日期</span>
+                    <input type="date" 
+                        v-model.trim = "input.Finish_Date"
+                        placeholder="請輸入閱讀完畢日期....">
+                    </div>
+
                 </br>
                 </br>
                     <div class="Button_SC">
@@ -46,27 +60,36 @@
                     </div>
                     
                     </div>
-
-                    <div class="menu">
-                        <div class="menuItem"
-                            v-for="(item,index) in Book" 
+                </div>
+                
+                <div class="menu">
+                    <div class="menuItem"
+                        v-for="(item,index) in Book" 
+                    >
+                        <span class="number">{{ item.id}}</span>
+                        <span class="type">{{ item.BookType }}</span>
+                        <a
+                            :href="item.link"
+                            target="vue-iron"
+                            class="title"
                         >
-                            <span class="number">{{ item.id}}</span>
-                            <span class="type">{{ item.BookType }}</span>
-                            <a
-                                :href="item.link"
-                                target="vue-iron"
-                                class="title"
-                            >
-                                 {{ item.BookName }}
-                            </a>
+                             {{ item.BookName}}                                               
+                        </a>
+                       
+ 
+                                           
+                       <div class="Button_ED">
+                        <button class="btn_edit" @click="EditHander(index)">編輯</button>
+                        <button class="btn_delete"@click="DeleteHander(index)">刪除</button>            
+                    </div>
 
-                           <div class="Button_ED">
-                            <button class="btn_edit" @click="EditHander(index)">編輯</button>
-                            <button class="btn_delete"@click="DeleteHander(index)">刪除</button>
-                          </div>
+                    <div  class="authortext" style ="float: right;">
+                            <a>  &nbsp; ◆{{ item.Author}}    </a>
+                    </div>
+                    <div  class="finishdate" style ="float: right;">
+                            <a>  &nbsp; <{{ item.Finish_Date}}>   </a>
+                    </div>
 
-                        </div>
                     </div>
                 </div>
             </div>

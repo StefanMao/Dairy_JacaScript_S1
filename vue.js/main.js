@@ -11,15 +11,16 @@
             input:{
                 BookType:"全部",
                 BookName:"",
-                Author:"",  
+                Author:"",
+                Finish_Date:"",
             }
         },
         methods:{
             SubmitHander(){
                 //解構賦值
-                let {BookType,BookName,Author}=this.input
+                let {BookType,BookName,Author,Finish_Date}=this.input
                 
-                if( !BookType || !BookName ||!Author){
+                if( !BookType || !BookName ||!Author || !Finish_Date){
                     alert("不可有欄位空白!!")
                     return 
                 }
@@ -56,13 +57,15 @@
                 this.input.BookType='全部'
                 this.input.BookName=''
                 this.input.Author=''
+                this.input.Finish_Date=''
             },
             EditHander(index){
-                let {BookType , BookName ,Author} =this.Book[index]
+                let {BookType , BookName ,Author,Finish_Date} =this.Book[index]
                 this.input={
                     BookType,
                     BookName,
-                    Author
+                    Author,
+                    Finish_Date
                 }
                 this.EditIndex=index
                 

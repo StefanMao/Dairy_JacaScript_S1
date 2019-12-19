@@ -1,16 +1,88 @@
 {
   "Book": [
     {
-      "id": 1,
       "BookType": "文學",
       "BookName": "因為這是你的人生 - 情商課2",
-      "Author": "蔡康永"
+      "Author": "蔡康永",
+      "Finish_Date": "2019-12-02",
+      "id": 1
     },
     {
-      "BookType": "全部",
-      "BookName": "555",
-      "Author": "555",
+      "BookType": "文學",
+      "BookName": "為你自己活一次-情商課",
+      "Author": "蔡康永",
+      "Finish_Date": "2019-11-12",
       "id": 2
+    },
+    {
+      "BookType": "文學",
+      "BookName": "挪威的森林",
+      "Author": "村上春樹",
+      "Finish_Date": "2019-12-17",
+      "id": 3
+    },
+    {
+      "BookType": "文學",
+      "BookName": "孤獨是生命的禮物",
+      "Author": "余光中",
+      "Finish_Date": "2018-12-10",
+      "id": 4
+    },
+    {
+      "BookType": "文學",
+      "BookName": "傲慢與偏見",
+      "Author": "珍.奧斯汀",
+      "Finish_Date": "2018-10-07",
+      "id": 5
+    },
+    {
+      "BookType": "哲學",
+      "BookName": "蘇菲的世界",
+      "Author": "喬斯坦.賈德",
+      "Finish_Date": "2019-03-05",
+      "id": 6
+    },
+    {
+      "BookType": "文學",
+      "BookName": "我想吃掉你的胰臟",
+      "Author": "佳野夜",
+      "Finish_Date": "2019-01-15",
+      "id": 7
+    },
+    {
+      "BookType": "文學",
+      "BookName": "所有失去的終將以另一種方式歸來",
+      "Author": "耿帥",
+      "Finish_Date": "2017-06-25",
+      "id": 8
+    },
+    {
+      "BookType": "商業管理",
+      "BookName": "創新的擴散",
+      "Author": "羅吉斯",
+      "Finish_Date": "2017-12-24",
+      "id": 9
+    },
+    {
+      "BookType": "商業管理",
+      "BookName": "企業的性格與命運",
+      "Author": "Joel.Bakan",
+      "Finish_Date": "2016-10-30",
+      "id": 10
+    },
+    {
+      "BookType": "工程",
+      "BookName": "Big JAVA .4th",
+      "Author": "WILEY",
+      "Finish_Date": "2014-11-05",
+      "id": 11
+    },
+    {
+      "BookType": "工程",
+      "BookName": "Problem Solving  with c++",
+      "Author": "Savitch",
+      "Finish_Date": "2014-07-03",
+      "id": 12
     }
   ]
 }
