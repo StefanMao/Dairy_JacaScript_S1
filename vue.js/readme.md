@@ -5,12 +5,12 @@
 趁著剛退伍找工作的這段時間，一邊整理之前在學校閱讀過的書籍、一邊練習Vue.js框架的應用，實作一個可以將閱讀過的書籍記錄下來。
 
 ## 開發工具/語言/技能
-1.JavaScript 、Css、Html
-2.Vue.js 框架 (未來會使用到 vue cli 、vue router )
-3.BootStrap
-4.Api 資料串接功能
-5.擁有(新增、修改、刪除、編輯)功能
-6.搜尋功能
+1.JavaScript 、Css、Html  
+2.Vue.js 框架 (未來會使用到 vue cli 、vue router )  
+3.BootStrap  
+4.Api 資料串接功能  
+5.擁有(新增、修改、刪除、編輯)功能  
+6.搜尋功能  
 
 
 ## 網頁介面
