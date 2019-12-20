@@ -12,7 +12,6 @@ html {
   color: #34495e;
   background-color: #DDDDDD;
   font-family: '微軟正黑體';
-  overflow: hidden;
 }
 
 #app {
@@ -168,7 +167,15 @@ h1,
   line-height: 30px;
   text-decoration: none;
   color: #34495e;
+  font-weight: 900;
+}
+.menuItem > .authortext {
+  line-height: 30px;
+  text-align: right;
+  text-decoration: none;
+  color: #34495e;
   font-weight: 800;
+
 }
 
 
@@ -306,9 +313,6 @@ h1,
 .btn_delete:hover {
   background-color: #f44336;
   color: white;
-}
-.menuItem > .author{
-  float: right;
 }
 .mylinkButton {
 	box-shadow:inset 7px 50px 0px 50px #ffffff;

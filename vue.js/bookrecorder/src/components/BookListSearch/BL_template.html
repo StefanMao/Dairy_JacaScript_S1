@@ -1,0 +1,61 @@
+<body>
+  <div id ="app">
+      <section>
+          <div class="container">
+                  <h1>書籍紀錄清單</h1>
+              <div class="title">
+                  
+                  <div class="input" style="font-size:0px;">
+                          <span>書籍分類</span>
+                  <select v-model = "input.BookType" placeholder="分類..">
+                      
+                      <option>全部</option>
+                      <option>工程</option>
+                      <option>文學</option>
+                      <option>哲學</option>
+                      <option>故事</option>
+                      <option>語言</option>
+                      <option>會計/財務</option>
+                  </select>
+                  <div class="input" style="font-size:0px;">
+                  <span>書籍名稱</span>
+                          <input type="text" 
+                          v-model.trim = "input.BookName"
+                          placeholder="請輸入書名....">
+                  </div>                
+
+              </br>
+              </br>
+                  
+                  </div>
+              </div>
+              
+              <div class="menu">
+                  <div class="menuItem"
+                      v-for="(item,index) in titlemenu" 
+                  >
+                      <span class="number">{{ item.id}}</span>
+                      <span class="type">{{ item.BookType }}</span>
+                      <a
+                          :href="item.link"
+                          target="vue-iron"
+                          class="title"
+                      >
+                           {{ item.BookName }}                                             
+
+                      </a> 
+                      <div  class="authortext" style ="float: right;">
+                              <a>  &nbsp; ◆{{ item.Author}}    </a>
+                      </div>
+                      <div  class="finishdate" style ="float: right;">
+                              <a>  &nbsp; <{{ item.FinishDate}}>   </a>
+                      </div>                                    
+                  </div>
+              </div>
+          </div>
+
+      </section>
+
+  </div>
+
+</body>
