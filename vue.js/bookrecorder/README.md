@@ -15,34 +15,33 @@
 
 ## 網頁介面
 
-### 1. 閱讀書籍管理專區
+### 1. 閱讀書籍管理專區 (更新 2019/12/20)
 
 載入api  json  檔案，並可以進行(新增、修改、刪除、編輯)功能，資料亦會同步到json檔案中。
-![alt tag](http://imgur.com/B9Ex66v.jpg)
+![alt tag](http://imgur.com/CLxEFbE.jpg)
 
 
-### 2. 書籍紀錄專區
+### 2. 書籍紀錄專區(更新2019/12/20)
 
 載入書籍紀錄資料，並可以透過類別及書名的方式篩選書籍。
 
-(分類為「全部」的書籍)
-![alt tag](http://imgur.com/gsNUX1J.jpg)
-
-(分類為「文學」的書籍)
-![alt tag](http://imgur.com/FzHh9Hd.jpg)
-
 (利用使用者輸入的方式搜尋書名中含有「的」字的搜尋)
-![alt tag](http://imgur.com/NK7uFbF.jpg)
+![alt tag](http://imgur.com/o9ZhwgR.jpg)
 
 ### 3.json檔
 
 ![alt tag](http://imgur.com/nJ1RKHK.jpg)
 
-## 下一步計畫
-1.改善使用者介面
-2.利用node.js將資料寫入
+## 更新進度
+### 1.改善使用者介面
+    2019/12/20 - 使用BootStrapVue2.0 套件
+    2019/12/20 - 添加Navbar
+    
+### 2.2019/12/20 使用Vue Cli專案開發架構進行開發
 
-## Project setup
+### 3.使用Vue router 來進行分頁功能
+
+## Project setup 常用指令
 ```
 npm install
 ```
@@ -62,5 +61,8 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### step ip json
+```
+npm run json
+```
+
