@@ -1,8 +1,9 @@
 <script>
-import axios from 'axios'
+import axios from 'axios';
+
 export default {
   name: 'booklist-component',
-  data () {
+  data() {
     return {
       loading: false,
       Book: [],
@@ -11,58 +12,54 @@ export default {
         BookType: '全部',
         BookName: '',
         Author: '',
-        FinishDate: ''
-      }
-    }
+        FinishDate: '',
+      },
+    };
   },
-  mounted () {
-    this.loading = true
+  mounted() {
+    this.loading = true;
     axios.get('http://localhost:8888/Book')
       .then((res) => {
-        console.log(res)
-        this.Book = res.data
-        this.loading = false
+        console.log(res);
+        this.Book = res.data;
+        this.loading = false;
       }).catch((err) => {
-        console.log(err)
-      })
+        console.log(err);
+      });
   },
   mothods: {
-    inputHandler () {
+    inputHandler() {
       if (this.input.title) {
         this.menu.push({
           type: this.input.type,
           title: this.input.title,
-          link: 'javascript:;'
-        })
-        this.input.title = ''
+          link: 'javascript:;',
+        });
+        this.input.title = '';
       }
-    }
+    },
 
   },
   computed: {
-    typemenu () {
+    typemenu() {
       if (this.input.BookType !== '全部') {
-        return this.Book.filter(item => {
-          return item.BookType === this.input.BookType
-        })
-      } else {
-        return this.Book
+        return this.Book.filter((item) => item.BookType === this.input.BookType);
       }
+      return this.Book;
     },
-    titlemenu () {
+    titlemenu() {
       if (this.input.BookName) {
-        return this.typemenu.filter(item => {
-          let content = item.BookName.toLowerCase()
-          let keyword = this.input.BookName.toLowerCase()
-          return content.indexOf(keyword) !== -1
-        })
-      } else {
-        return this.typemenu
+        return this.typemenu.filter((item) => {
+          const content = item.BookName.toLowerCase();
+          const keyword = this.input.BookName.toLowerCase();
+          return content.indexOf(keyword) !== -1;
+        });
       }
-    }
+      return this.typemenu;
+    },
 
-  }
-}
+  },
+};
 </script>
 <template src="./BL_template.html"></template>
 <style src="./BL.css" scoped></style>

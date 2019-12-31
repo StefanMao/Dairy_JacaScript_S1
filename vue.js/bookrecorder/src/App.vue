@@ -4,7 +4,7 @@
       <b-navbar toggleable="lg"
                 type="dark"
                 variant="info">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand href="#">Blog</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,7 +12,7 @@
                     is-nav>
           <b-navbar-nav>
             <b-nav-item to="/Home">首頁</b-nav-item>
-            <b-nav-item to="/about">About</b-nav-item>
+            <b-nav-item to="/TravelRecommend/travel.vue">旅遊推薦</b-nav-item>
             <b-nav-item to="/BookListSearch/booklistsearch.vue">閱讀書籍清單</b-nav-item>
             <b-nav-item to="/Bookmanagement/bookmanage.vue">書籍紀錄管理</b-nav-item>
           </b-navbar-nav>
@@ -52,14 +52,14 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue)
-export default {
+import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-}
+Vue.use(BootstrapVue);
+export default {
+};
 </script>
 
 <style></style>
